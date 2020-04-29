@@ -22,12 +22,7 @@ namespace Innoactive.CreatorEditor.Core.UI.Drawers
                 return base.GetTypeNameLabel(value, declaredType);
             }
 
-            if (behavior.AudioData is ResourceAudio)
-            {
-                return new GUIContent("Play Audio File");
-            }
-
-            return base.GetTypeNameLabel(value, declaredType);
+            return base.GetTypeNameLabel(behavior.AudioData, behavior.AudioData.GetType());
         }
     }
 }
